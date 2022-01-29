@@ -92,7 +92,7 @@ class Fase():
         :param tempo: Tempo de lançamento
         """
         for passaro in self._passaros:
-            if not self._passaros.foi_lancado():
+            if not passaro.foi_lancado():
                 passaro.lancar(angulo, tempo)
                 break
 
@@ -120,12 +120,12 @@ class Fase():
 
     def _possui_porco_ativo(self):
         for porco in self._porcos:
-            if porco.status==ATIVO:
+            if porco.status == ATIVO:
                 return True
         return False
 
     def _possui_passaros_ativos(self):
         for passaro in self._passaros:
-            if passaro.status==ATIVO:
+            if passaro.status == ATIVO:
                 return True
         return False
